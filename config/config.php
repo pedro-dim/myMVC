@@ -1,4 +1,7 @@
-$config=["NAME"=>"My New App",
-"SIZE"=>"20Mb",
+<?php
+
+$config = [
+    "NAME" => "My New App",
+    "SIZE" => "20Mb",
 
 ];
