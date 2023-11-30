@@ -1,0 +1,22 @@
+{
+  "name": "pedrodim/camus",
+  "type": "library",
+  "description": "Albert Camus Package Test",
+  "keywords": [
+    "seus",
+    "keywords"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pedro Dim",
+      "email": "test@test.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "PedroDim\\Camus\\": "src/"
+    }
+  }
+}
