@@ -8,7 +8,7 @@ use App\Routes\Route;
 if ($_SERVER['REQUEST_URI'] == '/') {
 
 
-    Route::GET('/', 'HomeController', 'show');
+    Route::GET('/', 'HomeController', 'tview');
     Route::dispatch('/', 'GET');
 }
 

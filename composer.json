@@ -22,7 +22,8 @@
     },
     "require": {
         "intervention/image": "^2.7",
-        "pedrodim/camus": "dev-main"
+        "pedrodim/camus": "dev-main",
+        "twig/twig": "^3.0"
     },
     "repositories": [
         {
