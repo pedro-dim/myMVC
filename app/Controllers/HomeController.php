@@ -5,19 +5,13 @@
 namespace App\Controllers;
 
 
-
-
-
 use PedroDim\Camus\Camus;
+
 
 class HomeController extends Controller
 {
 
 
-    public function __construct()
-    {
-        parent::__construct();
-    }
 
 
 
@@ -32,11 +26,6 @@ class HomeController extends Controller
 
     public function tview()
     {
-
-
-        // require '../config/twig-config.php';
-
-
 
         echo $this->twig->render('home.twig', []);
     }

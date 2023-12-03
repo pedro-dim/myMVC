@@ -4,11 +4,15 @@
 
 namespace App\Routes;
 
+use App\Controller;
 
 
 
 class Route
 {
+
+
+
     private static $routes = [];
 
     public static $dir_path = 'App\\Controllers\\';
@@ -38,7 +42,7 @@ class Route
     {
 
 
-        //dd('ok');
+
         foreach (self::$routes as $route) {
             if ($route['path'] === $path && $route['httpMethod'] === $httpMethod) {
                 $controllerClass = $route['controller'];
