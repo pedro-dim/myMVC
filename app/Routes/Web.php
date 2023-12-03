@@ -22,6 +22,16 @@ if ($_SERVER['REQUEST_URI'] == '/about') {
 
 
 
+if ($_SERVER['REQUEST_URI'] == '/request') {
+
+
+    Route::GET('/request', 'GuzzleController', 'show');
+    Route::dispatch('/request', 'GET');
+}
+
+
+
+
 
 if ($_SERVER['REQUEST_URI'] == '/services') {
 

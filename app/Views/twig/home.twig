@@ -2,12 +2,12 @@
 
 {% block body %}
 
-<h1>Home</h1>
 
-Twig Home
+{% for item in fakeData %}
 
-<p class="m-4">
+<h1>{{item.name }}</h1>
+{{ break }}
+{% endfor %}
 
-    {# <?php echo R::findOne('users'); ?> #}
 
-</p>{% endblock %}
+{% endblock %}

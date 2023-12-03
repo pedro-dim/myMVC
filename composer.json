@@ -25,7 +25,8 @@
         "intervention/image": "^2.7",
         "doctrine/orm": "^2.17",
         "pedrodim/camus": "dev-main",
-        "twig/twig": "^3.0"
+        "twig/twig": "^3.0",
+        "guzzlehttp/guzzle": "^7.0"
     },
     "repositories": [
         {
