@@ -1,9 +1,10 @@
 <?php
 
-require_once  '../vendor/autoload.php';
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
 
-$loader = new \Twig\Loader\FilesystemLoader('../app/Views/twig');
-$twig = new \Twig\Environment($loader, [
+$loader = new FilesystemLoader('../app/Views/twig/');
+$twig = new Environment($loader, [
     //  'cache' => '../app/Cache/twig',
 ]);
 

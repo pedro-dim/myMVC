@@ -16,6 +16,7 @@ class HomeController extends Controller
 
     public function __construct()
     {
+        parent::__construct();
     }
 
 
@@ -33,13 +34,10 @@ class HomeController extends Controller
     {
 
 
-        require '../config/twig-config.php';
+        // require '../config/twig-config.php';
 
 
 
-        $dados = 'joaqum';
-        //  var_dump($twig);
-
-        echo $twig->render('template.twig', ['variavel' => $dados]);
+        echo $this->twig->render('home.twig', []);
     }
 }
