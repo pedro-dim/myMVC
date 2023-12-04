@@ -11,6 +11,6 @@ class AboutController extends Controller
     {
 
 
-        require __DIR__ . "../../Views/about.php";
+        echo $this->twig->render('about.twig', []);
     }
 }

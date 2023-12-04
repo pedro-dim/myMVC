@@ -10,6 +10,6 @@ class GuzzleController extends Controller
 
     public function show()
     {
-        return ($test = TestRequest::getApi());
+        return $test = TestRequest::getApi();
     }
 }

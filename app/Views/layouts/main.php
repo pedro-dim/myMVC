@@ -17,7 +17,7 @@
 
     <div class="bg-stone-300 m-8 p-4 text-stone-500">
 
-        <?php require '../app/Routes/Routes.php'; ?>
+        <?php require '../app/Router/Routes.php'; ?>
         <?php require  __DIR__ . '../partials/content.php'; ?>
 
 

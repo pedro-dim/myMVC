@@ -36,7 +36,7 @@ class HomeController extends Controller
 
 
 
-    public function show()
+    public function old()
     {
 
         echo (new Camus())::quote();
@@ -45,9 +45,9 @@ class HomeController extends Controller
     }
 
 
-    public function tview()
+    public function show()
     {
 
-        echo $this->twig->render('home.twig', ['fakeData' => $this->fakeData]);
+        return $this->twig->render('home.twig', ['fakeData' => $this->fakeData]);
     }
 }
