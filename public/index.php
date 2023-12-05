@@ -3,29 +3,28 @@
 declare(strict_types=1);
 
 
+require_once __DIR__ . '../../vendor/autoload.php';
+
 use  App\Utils\Utils;
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
-
 use Pecee\SimpleRouter\SimpleRouter;
+use App\Database\Database;
 
-require '../config/env.php';
+require  '../app/config/env.php';
 require '../app/Core/functions.php';
-require '../config/database.php';
-require '../config/config.php';
+require '../app/config/config.php';
+//require '../app/config/database.php';
 
-
-//extract($config);
-
-$appName = $config['app']['APP_NAME'];
-require '../app/Views/layouts/main.php';
 
 require_once '../app/Router/helpers.php';
 require_once '../app/Router/routes.php';
 
 
+(new Database())->connect($database);
+
+
+
 SimpleRouter::setDefaultNamespace('App\Routers');
 
-// Start the routing
+// Start the routing   
 SimpleRouter::start();

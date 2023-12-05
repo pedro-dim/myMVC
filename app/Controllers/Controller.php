@@ -4,27 +4,26 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-
+use App\Database\Database;
+use App\Traits\TwigTrait;
 use Twig\Environment;
 use App\Contracts\TwigInterface;
 use Twig\Loader\FilesystemLoader;
+use Twig\Extension\SandboxExtension;
 
-abstract class Controller implements TwigInterface
+
+
+
+
+abstract class Controller
 {
-    public $loader;
-    public $twig;
+
+    use TwigTrait;
+
 
     public function __construct()
     {
+
         $this->view();
-    }
-
-
-
-    public function view()
-    {
-
-        $this->loader = (new FilesystemLoader(__DIR__ . '../../Views/twig/'));
-        $this->twig = new Environment($this->loader, []);
     }
 }

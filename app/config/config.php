@@ -1,5 +1,6 @@
 <?php
 
+
 $config = [
     'app' => [
         "APP_NAME" => "My MVC",
@@ -18,3 +19,5 @@ $config = [
         "CACHE_PORT" => "6379",
     ],
 ];
+
+return extract($config);

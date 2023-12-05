@@ -9,6 +9,14 @@ function dd($value)
     die();
 }
 
+function uri($path)
+{
+    if ($_SERVER['REQUEST_URI'] == $path)
+        return "md:text-blue-400";
+}
+
+
+
 
 function getDirectorySize($directory)
 {

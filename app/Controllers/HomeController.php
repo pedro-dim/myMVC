@@ -5,7 +5,9 @@
 namespace App\Controllers;
 
 
-use PedroDim\Camus\Camus;
+use App\Models\User;
+use Carbon\Carbon;
+
 
 
 class HomeController extends Controller
@@ -36,18 +38,16 @@ class HomeController extends Controller
 
 
 
-    public function old()
-    {
-
-        echo (new Camus())::quote();
-
-        require __DIR__ . "../../Views/home.php";
-    }
-
-
     public function show()
     {
+        $user = new User();
 
-        return $this->twig->render('home.twig', ['fakeData' => $this->fakeData]);
+        //  dd($user);
+
+
+        // $user = R::findOne('users');
+        //new User();
+
+        return $this->twig->render('home.twig', ['fakeData' => $this->fakeData, 'user' => $user]);
     }
 }

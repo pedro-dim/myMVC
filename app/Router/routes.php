@@ -22,3 +22,7 @@ use App\Controllers\GuzzleController;
 SimpleRouter::get('/', [HomeController::class, 'show']);
 SimpleRouter::get('/about', [AboutController::class, 'show']);
 SimpleRouter::get('/request', [GuzzleController::class, 'show']);
+SimpleRouter::get('/services', function () {
+
+    return "Services Page";
+});
