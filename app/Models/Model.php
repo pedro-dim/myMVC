@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\Contracts\ConnectionInterface;
-
+use \R as R;
 
 abstract class Model implements ConnectionInterface
 {
@@ -32,5 +32,17 @@ abstract class Model implements ConnectionInterface
         } catch (\Exception  $e) {
             $e->getMessage();
         }
+    }
+
+    public static function getOne($table)
+    {
+
+        return  R::findOne($table, 'id = 1');
+    }
+
+    public static function all($table)
+    {
+
+        return  R::findAll($table);
     }
 }

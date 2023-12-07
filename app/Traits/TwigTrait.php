@@ -15,11 +15,11 @@ trait TwigTrait
     public $twig;
 
 
-    public function view()
+    public function view($pathView,)
     {
 
 
-        $this->loader = (new FilesystemLoader(__DIR__ . '../../Views/twig/'));
+        $this->loader = (new FilesystemLoader(__DIR__ . $pathView));
         $this->twig = new Environment($this->loader, []);
     }
 }

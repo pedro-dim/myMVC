@@ -1,8 +1,9 @@
 <?php
 
+
 declare(strict_types=1);
 
-namespace App\Controllers;
+namespace App\Controllers\Admin;
 
 use App\Database\Database;
 use App\Traits\TwigTrait;
@@ -11,19 +12,22 @@ use App\Contracts\TwigInterface;
 use Twig\Loader\FilesystemLoader;
 use Twig\Extension\SandboxExtension;
 
-
-
-
-
-abstract class Controller
+class DashboardController
 {
 
     use TwigTrait;
 
-
     public function __construct()
     {
+        $this->view('../../Views/twig/admin/');
+    }
 
-        $this->view('../../Views/twig/');
+    public function show()
+    {
+
+        //  return "admin Page";
+        // $query = R::findOne('users');
+
+        return $this->twig->render('template.twig', []);
     }
 }

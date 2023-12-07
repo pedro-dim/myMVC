@@ -6,9 +6,12 @@ declare(strict_types=1);
 require_once __DIR__ . '../../vendor/autoload.php';
 
 use  App\Utils\Utils;
-
-use Pecee\SimpleRouter\SimpleRouter;
 use App\Database\Database;
+use App\Middlewares\AuthMiddleware;
+use Pecee\SimpleRouter\SimpleRouter;
+use App\Controllers\Admin\DashboardController;
+
+
 
 require  '../app/config/env.php';
 require '../app/Core/functions.php';

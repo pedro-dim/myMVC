@@ -14,6 +14,6 @@ class AboutController extends Controller
 
         $query = R::findOne('users');
 
-        echo $this->twig->render('about.twig', ['query' => $query]);
+        return $this->twig->render('about.twig', ['query' => $query]);
     }
 }
